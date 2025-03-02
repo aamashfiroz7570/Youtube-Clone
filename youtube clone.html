@@ -1,0 +1,452 @@
+<html>
+
+<head>
+    <title>YouTube</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="icon" href="img0.png">
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        #header {
+            height: 60px;
+            width: 100%;
+            /*background:red;*/
+            position: fixed;
+            left: 0;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            padding-left: 16px;
+            padding-right: 16px;
+            align-items: center;
+        }
+
+        #sidenav {
+            width: 250px;
+            /*background:blue;*/
+            height: 100%;
+            position: fixed;
+            top: 60;
+            left: 0;
+        }
+
+        #section {
+            /*background:cyan;*/
+            height: 500px;
+            width: calc(100% - 250px);
+            margin-left: 250px;
+            margin-top: 60px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 24px;
+            box-sizing: border-box;
+        }
+
+        #col {
+            width: 23.5%;
+            /*height:200px;*/
+            /*background:black;*/
+        }
+
+        #thumb {
+            border-radius: 16px;
+        }
+
+        #logo {
+            border-radius: 50%;
+        }
+
+        #content {
+            display: flex;
+            align-items: start;
+            column-gap: 14px;
+            margin-top: 10px;
+        }
+
+        #title {
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+            text-transform: capitalize;
+        }
+
+        #channel-name {
+            padding: 0;
+            margin-top: 6px;
+            margin-bottom: 0px;
+            font-size: 15px;
+            color: gray;
+            font-family: sans-serif;
+        }
+
+        #view {
+            margin: 0;
+            padding: 0;
+            font-size: 13px;
+            color: gray;
+            font-family: sans-serif
+        }
+
+        #icon-btn {
+            border-radius: 50%;
+            border-style: none;
+            width: 44px;
+            height: 44px;
+            border-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: white;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #ccc;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: grey;
+            border-radius: 10px;
+        }
+
+        #left {
+            display: flex;
+            align-items: center;
+            column-gap: 4px;
+
+        }
+
+        #icon-btn:hover {
+            background-color: #f5f5f5;
+        }
+
+        #center {
+            display: flex;
+            align-items: center;
+            column-gap: 4px;
+        }
+
+        #right {
+            display: flex;
+            align-items: center;
+            column-gap: 8px;
+            padding-right: 32px;
+        }
+
+        #search-form {
+            display: flex;
+            margin-top: 10px;
+        }
+
+        #search {
+            height: 40px;
+            border: 1px solid #ddd;
+            padding-left: 8px;
+            padding-right: 8px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            width: 450px;
+        }
+
+        #search-btn {
+            height: 40px;
+            border: 1px solid #ddd;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            width: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .link-youtube {
+            text-decoration: none;
+            font-family: arial;
+            color: black;
+            font-weight: bold;
+        }
+
+        #menu {
+            border-style: none;
+            display: flex;
+            align-items: center;
+            column-gap: 20px;
+            font-size: 14px;
+            width: 100%;
+            padding: 8px;
+            border-radius: 8px;
+            margin-bottom: 4px;
+            background-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div id="left">
+            <button id="icon-btn">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            <img src="youtube.png" width="120">
+        </div>
+        <div id="center">
+            <div>
+                <form id="search-form">
+                    <input id="search" type="search" name="search" placeholder="search this site" />
+                    <button id="search-btn">
+                        <span class="material-symbols-outlined">search</span>
+                    </button>
+                </form>
+            </div>
+            <button id="icon-btn">
+                <span class="material-symbols-outlined">mic</span>
+            </button>
+        </div>
+        <div id="right">
+            <button id="icon-btn">
+                <span class="material-symbols-outlined">videocam</span>
+            </button>
+            <button id="icon-btn">
+                <span class="material-symbols-outlined">notifications</span>
+            </button>
+            <button id="icon-btn">
+                <img src="img1.jpeg" width="32" id="logo">
+            </button>
+        </div>
+    </div>
+    <div id="sidenav">
+        <button id="menu" style="background-color:#f5f5f5;">
+            <span class="material-symbols-outlined">home</span>
+            Home
+        </button>
+        <button id="menu">
+            <span class="material-symbols-outlined">play_circle</span>
+            Shorts
+        </button>
+        <button id="menu">
+            <span class="material-symbols-outlined">subscriptions</span>
+            Subscriptions
+        </button>
+    </div>
+    <div id="section">
+        <!--first image-->
+        <div id="col">
+            <a href="https://youtu.be/Bm9rgipvrxk?si=3Q8D31wAvoSxBBuM"><img src="photo1.jfif" width="100%"
+                    id="thumb"></a>
+            <div id="content">
+                <img src="t photo3.jfif" width="32" id="logo">
+                <div>
+                    <a class="link-youtube" href="https://youtu.be/Bm9rgipvrxk?si=3Q8D31wAvoSxBBuM">Awsome Movie Stree
+                        2</a>
+                    <p id="channel-name">PVR</p>
+                    <p id="view">200K Views 2 hours ago</p>
+                </div>
+            </div>
+        </div>
+        <!--second image-->
+        <div id="col">
+            <a href="https://youtu.be/8NJP5oyA1lg?si=m3CUbuYv6XisRtnb"><img src="pic2.jpg" width="100%"
+                    id="thumb"></a>
+            <div id="content">
+                <img src="t photo3.jfif" width="32" id="logo">
+                <div>
+                    <a class="link-youtube" href="https://youtu.be/8NJP5oyA1lg?si=m3CUbuYv6XisRtnb">GOAT Full Movie</a>
+                    <p id="channel-name">PVR</p>
+                    <p id="view">500K Views 10 hours ago</p>
+                </div>
+            </div>
+        </div>
+        <!--third image-->
+        <div id="col">
+            <a href="https://youtu.be/gn7CNpLN6lU?si=4PiSg3d_-k8LTb35"><img src="photo3.jfif" width="100%"
+                    id="thumb"></a>
+            <div id="content">
+                <img src="t photo3.jfif" width="32" id="logo">
+                <div>
+                    <a class="link-youtube" href="https://youtu.be/gn7CNpLN6lU?si=4PiSg3d_-k8LTb35">singham again full
+                        movie</a>
+                    <p id="channel-name">PVR</p>
+                    <p id="view">1.4M Views 4 hours ago</p>
+                </div>
+            </div>
+        </div>
+        <!--fourth image-->
+        <div id="col">
+            <a href="https://youtu.be/PCNJLtRwPQo?si=PhAg67LQ7IGhxtK9"><img src="photo4.jfif" width="100%" id="thumb">
+                <div id="content">
+                    <img src="t photo3.jfif" width="32" id="logo">
+                    <div>
+                        <a class="link-youtube" href="https://youtu.be/PCNJLtRwPQo?si=PhAg67LQ7IGhxtK9">bhool bhulaiyaa
+                            3 full movie</a>
+                        <p id="channel-name">PVR</p>
+                        <p id="view">565K Views 9 hours ago</p>
+                    </div>
+                </div>
+        </div>
+        <!--fifth image-->
+        <div id="col">
+            <a href="https://youtu.be/_lFNrFImIc8?si=RUJrwnvUQnjGGIeM"><img src="photo5.jfif" width="100%"
+                    id="thumb"></a>
+            <div id="content">
+                <img src="t photo3.jfif" width="32" id="logo">
+                <div>
+                    <a class="link-youtube" href="https://youtu.be/_lFNrFImIc8?si=RUJrwnvUQnjGGIeM">padmavati full
+                        movie</a>
+                    <p id="channel-name">PVR</p>
+                    <p id="view">111K Views 12 hours ago</p>
+                </div>
+            </div>
+        </div>
+        <!--sixth image-->
+        <div id="col">
+            <a href="https://youtu.be/0CFOoRWg8Qg?si=lVfeYTKmsKIoQT4Z"><img src="photo6.jfif" width="100%"
+                    id="thumb"></a>
+            <div id="content">
+                <img src="t photo3.jfif" width="32" id="logo">
+                <div>
+                    <a class="link-youtube" href="https://youtu.be/0CFOoRWg8Qg?si=lVfeYTKmsKIoQT4Z">awarapan full
+                        movie</a>
+                    <p id="channel-name">PVR</p>
+                    <p id="view">656K Views 9 hours ago</p>
+                </div>
+            </div>
+        </div>
+        <!--seventh image-->
+        <div id="col">
+            <img src="photo7.jfif" width="100%" id="thumb">
+            <div id="content">
+                <img src="t photo3.jfif" width="32" id="logo">
+                <div>
+                    <h4 id="title">Tiger 3 Full HD movie</h4>
+                    <p id="channel-name">PVR</p>
+                    <p id="view">117K Views 3 hours ago</p>
+                </div>
+            </div>
+        </div>
+        <!--eight image-->
+        <div id="col">
+            <img src="photo8.jfif" width="100%" id="thumb">
+            <div id="content">
+                <img src="t photo3.jfif" width="32" id="logo">
+                <div>
+                    <h4 id="title"> Amir Khan DHOOM 3</h4>
+                    <p id="channel-name">PVR</p>
+                    <p id="view">118K Views 5 hours ago</p>
+                </div>
+                
+            </div>
+        </div>
+           <!--first image-->
+        <div id="col">
+            <a href="https://youtu.be/Bm9rgipvrxk?si=3Q8D31wAvoSxBBuM"><img src="pic4.jpg" width="100%"
+                    id="thumb"></a>
+            <div id="content">
+                <img src="t photo3.jfif" width="32" id="logo">
+                <div>
+                    <a class="link-youtube" href="https://youtu.be/Bm9rgipvrxk?si=3Q8D31wAvoSxBBuM">Singham 3</a>
+                    <p id="channel-name">PVR</p>
+                    <p id="view">250K Views 3 hours ago</p>
+                </div>
+            </div>
+        </div>
+        <!--second image-->
+        <div id="col">
+            <a href="https://youtu.be/8NJP5oyA1lg?si=m3CUbuYv6XisRtnb"><img src="img4.webp" width="100%"
+                    id="thumb"></a>
+            <div id="content">
+                <img src="t photo3.jfif" width="32" id="logo">
+                <div>
+                    <a class="link-youtube" href="https://youtu.be/8NJP5oyA1lg?si=m3CUbuYv6XisRtnb">Salaar Full Movie</a>
+                    <p id="channel-name">PVR</p>
+                    <p id="view">507K Views 11 hours ago</p>
+                </div>
+            </div>
+        </div>
+        <!--third image-->
+        <div id="col">
+            <a href="https://youtu.be/gn7CNpLN6lU?si=4PiSg3d_-k8LTb35"><img src="pic11.jpg" width="100%"
+                    id="thumb"></a>
+            <div id="content">
+                <img src="t photo3.jfif" width="32" id="logo">
+                <div>
+                    <a class="link-youtube" href="https://youtu.be/gn7CNpLN6lU?si=4PiSg3d_-k8LTb35">Transformers</a>
+                    <p id="channel-name">PVR</p>
+                    <p id="view">1.7M Views 6 hours ago</p>
+                </div>
+            </div>
+        </div>
+        <!--fourth image-->
+        <div id="col">
+            <a href="https://youtu.be/PCNJLtRwPQo?si=PhAg67LQ7IGhxtK9"><img src="pic12.jpg" width="100%" id="thumb">
+                <div id="content">
+                    <img src="t photo3.jfif" width="32" id="logo">
+                    <div>
+                        <a class="link-youtube" href="https://youtu.be/PCNJLtRwPQo?si=PhAg67LQ7IGhxtK9">Cars Full Movie</a>
+                        <p id="channel-name">PVR</p>
+                        <p id="view">544K Views 8 hours ago</p>
+                    </div>
+                </div>
+        </div>
+        <!--fifth image-->
+        <div id="col">
+            <a href="https://youtu.be/_lFNrFImIc8?si=RUJrwnvUQnjGGIeM"><img src="pic13.jpg" width="100%"
+                    id="thumb"></a>
+            <div id="content">
+                <img src="t photo3.jfif" width="32" id="logo">
+                <div>
+                    <a class="link-youtube" href="https://youtu.be/_lFNrFImIc8?si=RUJrwnvUQnjGGIeM">Dangal Movie</a>
+                    <p id="channel-name">PVR</p>
+                    <p id="view">133K Views 11 hours ago</p>
+                </div>
+            </div>
+        </div>
+        <!--sixth image-->
+        <div id="col">
+            <a href="https://youtu.be/0CFOoRWg8Qg?si=lVfeYTKmsKIoQT4Z"><img src="pic14.jpg" width="100%"
+                    id="thumb"></a>
+            <div id="content">
+                <img src="t photo3.jfif" width="32" id="logo">
+                <div>
+                    <a class="link-youtube" href="https://youtu.be/0CFOoRWg8Qg?si=lVfeYTKmsKIoQT4Z"> Fast and Furious</a>
+                    <p id="channel-name">PVR</p>
+                    <p id="view">433K Views 9 hours ago</p>
+                </div>
+            </div>
+        </div>
+        <!--seventh image-->
+        <div id="col">
+            <img src="pic15.jpg" width="100%" id="thumb">
+            <div id="content">
+                <img src="t photo3.jfif" width="32" id="logo">
+                <div>
+                    <h4 id="title">Gadar 2 Full Movie</h4>
+                    <p id="channel-name">PVR</p>
+                    <p id="view">118K Views 3 hours ago</p>
+                </div>
+            </div>
+        </div>
+        <!--eight image-->
+        <div id="col">
+            <img src="pic16.jpg" width="100%" id="thumb">
+            <div id="content">
+                <img src="t photo3.jfif" width="32" id="logo">
+                <div>
+                    <h4 id="title">Dunki Movie</h4>
+                    <p id="channel-name">PVR</p>
+                    <p id="view">789K Views 9 hours ago</p>
+                </div>
+    </div> 
+</body>
+</html>
